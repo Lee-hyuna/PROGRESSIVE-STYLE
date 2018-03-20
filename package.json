@@ -1,0 +1,26 @@
+{
+  "name": "progressive-style",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.3",
+    "ejs": "^2.4.1",
+    "body-parser": "^1.14.2",
+    "express-session": "^1.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lee-hyuna/PROGRESSIVE-STYLE.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lee-hyuna/PROGRESSIVE-STYLE/issues"
+  },
+  "homepage": "https://github.com/Lee-hyuna/PROGRESSIVE-STYLE#readme"
+}
