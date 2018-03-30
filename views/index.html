@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>test..</h1>
-  </body>
+<html lang="ko">
+<head>
+<title>PROGRESSIVE STYLE FOR DIA</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel='stylesheet' type="text/css" href="/css/style.css" media="all" />
+<link href='http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <script>
+        /**
+        @param {object} target
+        @param {string} field - dot-seperated string i.e.) 'user.zach.name'
+        @param {any} value - any typeof value to be assigned
+        **/
+        function assignDeep(target, field, idx, value) {
+            var fieldSet = field.split('.');     
+
+            if(fieldSet[idx] !== undefined) {
+                return Object.assign({}, value)
+            }         
+
+            if(!target[fieldSet[idx]]) {
+                target[fieldSet[idx]] = {}
+            }
+
+            assignDeep(target[fieldSet[idx]], field, idx + 1, value)
+        }
+
+        var office = {};
+
+        assignDeep(office, 'teams.ftdev.dia.name', 0, 'lee');
+
+        console.log(office.teams.ftdev.dia.name); // lee
+
+        /**
+        office object status in json should look like:
+        office {
+            teams: {
+                ftdev: {
+                  dia: {
+                      name: 'hyuna'
+                  }
+                }
+            } 
+        }
+        **/
+    </script>
+</body>
 </html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+	<title>용준스크롤</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+<style type="text/css">
+* {padding:0; margin:0;}
+
+#wrap {width:100%;}
+
+#gnb {width:100%; overflow:hidden; position:fixed; left:0; top:0;}
+#gnb li {width:25%; float:left; list-style:none;}
+#gnb li a {height:50px; display:block; color:#fff; font-size:20px; line-height:50px; text-align:center;}
+#gnb li.m1 a {background-color:red;}
+#gnb li.m2 a {background-color:yellow; color:#000;}
+#gnb li.m3 a {background-color:green;}
+#gnb li.m4 a {background-color:violet;}
+
+#container {width:100%;}
+#container .section {width:100%; height:1500px;}
+#container .section.s1 {background-color:red;}
+#container .section.s2 {background-color:yellow;}
+#container .section.s3 {background-color:green;}
+#container .section.s4 {background-color:violet;}
+</style>
+	<div id="wrap">
+		<ul id="gnb">
+			<li class="m1"><a href="#self">menu1</a></li>
+			<li class="m2"><a href="#self">menu2</a></li>
+			<li class="m3"><a href="#self">menu3</a></li>
+			<li class="m4"><a href="#self">menu4</a></li>
+		</ul>
+		<div id="container">
+			<div class="section s1"></div>
+			<div class="section s2"></div>
+			<div class="section s3"></div>
+			<div class="section s4"></div>
+		</div>
+	</div>
+<script type="text/javascript">
+UI = {
+	load: function(){ //UI.load()를 실행합니다.
+		UI.gnb(); // 아래 정의한 UI.gnb()를 실행합니다.
+	},
+
+	gnb: function(){ //UI.gnb()를 정의해줍니다.
+		var gnb = $('#gnb li'),
+			section = $('#container .section'),
+			gnbHeight = $('#gnb').height();
+
+		gnb.each(function(i){this.num = i});
+		/*
+			each문을 통해 gnb li에 각 넘버를 부여합니다.
+			m1.num = 0;
+			m2.num = 1;
+			m3.num = 2;
+			m4.num = 3;
+		*/
+
+		var movement = function(number){ //파라미터값으로 number를 가져야 합니다!
+			var offsetHeight = section.eq(number).offset().top - gnbHeight; //section의 위치값을 받아와서 gnb높이값을 빼준값이라고 생각하시면 됩니다.
+			$('html, body').stop().animate({scrollTop:offsetHeight}, 500); //실질적으로 스크롤을 움직이는 animate부분입니다.
+		};
+
+		gnb.click(function(){
+			movement(this.num); //여기서 this.num은 내가 클릭한 gnb의 num값입니다.
+		});
+	}
+}
+
+$(document).ready(function(){
+	UI.load(); //문서가 준비되면 UI.load()함수를 실행하라는 실행문입니다.
+});
+</script>
+</body>
+</html>

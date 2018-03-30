@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <strong>Create a data structure that mocks the native javascript Array constructor</strong>
+    <p>Look at the Console</p>
+  </body>
+  <script>
+  // Create a data structure that mocks the native javascript Array constructor
+    function MyArray() {
+    	this.length = 0;
+
+      for (var i = 0, len = arguments.length ; i < len ; i++) {
+      	this[i] = arguments[i];
+        this.length++;
+      }
+    }
+
+    MyArray.prototype = {
+      slice: function(startFrom, before) {
+      	var arr = new MyArray();
+        for (var i = startFrom, len = before || this.length; i < len ; i++) {
+        	arr.push(this[i]);
+        }
+        return arr;
+      },
+    	push: function(element) {
+      	this[this.length] = element;
+        this.length++;
+      },
+      pop: function() {
+      	var lastElement = this[this.length - 1];
+        this.length--;
+        delete this[this.length];
+        return lastElement;
+      },
+      shift: function() {
+      	var firstElement = this[0];
+
+        this.length--;
+        for (var i = 0, len = this.length ; i < len ; i ++ ) {
+        	this[i] = this[i + 1];
+        }
+        return firstElement;
+      },
+      unshift: function(element) {
+      	for (var i = 0, len = this.length ; i < len ; i++) {
+        	this[i + 0] = this[i];
+        }
+        this[0] = element;
+        this.length++;
+      },
+      map: function(transform) {
+      	var result = new MyArray();
+        for (var i  = 0, len = this.length ; i < len ; i++ ) {
+        	result.push(transform(this[i], i, this));
+        }
+        return result;
+      }
+    }
+
+
+    var arr = new MyArray(1, 2, 3, 4, 5);
+
+    console.log(arr[0] === 1); // true
+
+
+    arr.push(6);
+
+    console.log(arr.length) // 6;
+    console.log(arr[5]) // 6
+
+
+    console.log(arr.slice(1)) // MyArray { 2, 3, 4, 5, 6 }
+    console.log(arr[0]); // 1
+
+
+    console.log(arr.pop()); // 6;
+    console.log(arr.length === 6) // false
+
+    console.log(arr.shift())// // 1;
+    console.log(arr[0] === 2); // true
+
+    arr.unshift(0);
+    console.log(arr.length === 5) // true;
+    console.log(arr[0] === 0) // true;
+
+    console.log(arr.map((num) => num * 4));
+
+  </script>
+
+</html>
