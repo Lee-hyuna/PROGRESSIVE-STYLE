@@ -1,50 +1,355 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
+
 <head>
-<title>PROGRESSIVE STYLE FOR DIA</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel='stylesheet' type="text/css" href="/css/style.css" media="all" />
-<link href='http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+  <title>카카오 프라이버시 정책</title>
+  <link rel="stylesheet" type="text/css" href="http://html.gt.dev.daum.net//privacy-2018/service/_css/font.css">
+  <link rel="stylesheet" type="text/css" href="http://html.gt.dev.daum.net//privacy-2018/service/_css/common.css">
+  <style>
+  </style>
 </head>
+
 <body>
-    <script>
-        /**
-        @param {object} target
-        @param {string} field - dot-seperated string i.e.) 'user.zach.name'
-        @param {any} value - any typeof value to be assigned
-        **/
-        function assignDeep(target, field, idx, value) {
-            var fieldSet = field.split('.');     
+  <!-- 모바일일때 gnb 메뉴 활성화시 menu_on 클래스 추가해주세요 -->
+  <div id="kakaoIndex">
+    <a href="#kakaoBody">본문 바로가기</a>
+    <a href="#kakaoGnb">메뉴 바로가기</a>
+  </div>
+  <div id="kakaoWrap" class="privacy_type1">
+    <!-- 메인 페이지인 경우 privacy_type1 클래스 추가해주세요 -->
+    <div id="kakaoHead" role="banner">
+      <div class="inner_head">
+        <h1>
+          <a href="#none" id="kakaoServiceLogo"><span class="ir_wa">kakao 프라이버시 정책</span></a>
+        </h1>
+        <div id="kakaoGnb" role="navigation">
+          <h2 class="screen_out">kakao 프라이버시 정책 메인 메뉴</h2>
+          <ul class="list_gnb">
+            <li>
+              <!-- 메뉴활성화시 gnb_on 클래스 추가해주세요~ -->
+              <a href="#none" class="link_gnb">보호</a>
+              <ul class="list_sub">
+                <li><a href="#none" class="link_sub" aria-current="page">프라이버시 철학</a></li><!-- 메뉴활성화시 on 클래스 및 aria-current 속성 추가해주세요~ -->
+                <li><a href="#none" class="link_sub">프라이버시 보호 노력</a></li>
+                <li><a href="#none" class="link_sub">프라이버시정책자문위원회</a></li>
+                <li><a href="#none" class="link_sub">정보보호 인증</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#none" class="link_gnb">프라이버시센터</a>
+              <ul class="list_sub">
+                <li><a href="#none" class="link_sub">프라이버시센터</a></li>
+                <li><a href="#none" class="link_sub">개인정보 처리절차 안내</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#none" class="link_gnb">투명성</a>
+              <ul class="list_sub">
+                <li><a href="#none" class="link_sub">투명성보고서란?</a></li>
+                <li><a href="#none" class="link_sub">투명성보고서(통계)</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#none" class="link_gnb">소식과 정보</a>
+            </li>
+          </ul>
+        </div>
+        <div class="wrap_util">
+          <div class="my_info">
+            <a href="#none" class="link_login">로그인</a>
+          </div>
+          <a href="#none" class="link_lang">ENG</a>
+        </div>
+        <button type="button" class="btn_menu"><span class="ico_privacy ico_menu">메인 메뉴 펼치기</span></button>
 
-            if(fieldSet[idx] !== undefined) {
-                return Object.assign({}, value)
-            }         
+        <div class="main_menu">
+          <div class="user_account">
+            <strong class="tit_my">내 카카오 계정을 직접 관리하세요</strong>
+            <a href="#none" class="link_kakaologin">카카오 계정 로그인</a>
+          </div>
+          <div class="gnb_mobile">
+            <ul class="list_gnbm">
+              <li class="gnbm_on">
+                <!-- 모바일 gnb 활성화시 li에 gnbm_on 클래스 / link_gnb 에 aria-expanded 속성 추가해주세요 -->
+                <a href="#none" class="link_gnb" aria-expanded="true">보호<span class="ico_privacy ico_arrow"></span></a>
+                <ul class="list_subm">
+                  <li><a href="#none" class="link_sub">프라이버시 철학</a></li>
+                  <li><a href="#none" class="link_sub">프라이버시 보호 노력</a></li>
+                  <li><a href="#none" class="link_sub">프라이버시정책자문위원회</a></li>
+                  <li><a href="#none" class="link_sub">정보보호 인증</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#none" class="link_gnb" aria-expanded="false">프라이버시센터<span class="ico_privacy ico_arrow"></span></a>
+                <ul class="list_subm">
+                  <li><a href="#none" class="link_sub">프라이버시센터</a></li>
+                  <li><a href="#none" class="link_sub">개인정보 처리절차 안내</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#none" class="link_gnb" aria-expanded="false">투명성<span class="ico_privacy ico_arrow"></span></a>
+                <ul class="list_subm">
+                  <li><a href="#none" class="link_sub">투명성보고서란?</a></li>
+                  <li><a href="#none" class="link_sub">투명성보고서(통계)</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#none" class="link_gnb">소식과 정보</a>
+              </li>
+            </ul>
+          </div>
+          <div class="wrap_relation">
+            <a href="#none" target="_blank" class="link_cs">문의하기</a><!-- 2018-10-08 텍스트 수정 -->
+            <div class="relation_svc relation_open">
+              <!-- 메뉴활성화시 relation_open 클래스 추가해주세요~ -->
+              <strong class="tit_relation">
+                <a href="#none" class="link_tit">관련사이트<span class="ico_privacy ico_relation"></span></a>
+              </strong>
+              <ul class="list_relation">
+                <li><a href="https://www.kakaocorp.com" target="_blank" class="link_relation">카카오</a></li>
+                <li><a href="https://www.daum.net " target="_blank" class="link_relation">다음 포털 사이트</a></li>
+                <li><a href="http://www.kakao.com/main" target="_blank" class="link_relation">카카오 서비스</a></li>
+                <li><a href="https://accounts.kakao.com" target="_blank" class="link_relation">카카오 계정</a></li>
+              </ul>
+            </div>
+            <div class="relation_util">
+              <!-- 2018-10-08 감싸는 div 추가 -->
+              <a href="#none" class="link_logout">로그아웃</a><!-- 2018-10-08 로그아웃 링크 추가 -->
+              <a href="#none" class="link_lang">ENG</a>
+            </div>
+          </div>
+          <button type="button" class="btn_close"><span class="ico_privacy ico_close">메인 메뉴 닫기</span></button>
+        </div>
+      </div>
+    </div>
+    <!-- // kakaoHead -->
+    <hr class="hide">
+    <div id="kakaoContent" class="cont_home" role="main">
+      <div id="cMain">
+        <!-- // mFeature -->
+        <div id="mArticle">
+          <div class="wrap_slide">
+            <div class="intro_cont section_main" style="height:0px">
+              <!-- 브라우저 높이값만큼 height 값 넣어주세요 -->
+              <div class="inner_section">
+                <h3 class="screen_out">서비스 안내</h3>
+                <div class="main_intro">
+                  <strong class="tit_intro">
+                    카카오는 새로운 연결을 통해<br>
+                    <span class="emph_info">더 편리하고 즐거운 세상을<br>꿈꿉니다.</span>
+                  </strong>
+                  <span class="img_character img_ryan"></span>
+                </div>
+                <div class="my_account">
+                  <p class="desc_login">내 카카오 계정을 직접 관리하세요</p>
+                  <a href="#none" class="link_login">카카오 계정 로그인</a>
+                </div>
+                <span class="ico_privacy ico_scroll">컨텐츠 더보기</span>
+              </div>
+            </div>
+            <div class="intro_cont intro_cont1">
+              <strong class="tit_g el_motion">음악이 필요할때, 날씨가 궁금할때<br>헤이 카카오!</strong><!-- 스크롤시 클래스 추가되면 모션효과 -->
+              <p class="desc_g el_motion">
+                상쾌한 아침, 목소리를 알아듣는 AI가<br>내 취향에 맞는 음악을 들려주며, <br class="mo_linefeed">오늘의 날씨를 알려줍니다.
+              </p>
+              <div class="img_character img_character1 el_motion"></div>
+            </div>
+            <div class="intro_cont intro_cont2">
+              <strong class="tit_g el_motion">추천 알고리즘을 이용한<br>맞춤형 뉴스</strong>
+              <p class="desc_g el_motion">
+                답답하고 지루한 지하철 출근길,<br>추천 알고리즘은 내 관심사와 선호도에 따른 <br class="mo_linefeed">맞춤형 뉴스를 보여줍니다.
+              </p>
+              <div class="img_character img_character2 el_motion"></div>
+            </div>
+            <div class="intro_cont intro_cont3">
+              <strong class="tit_g el_motion">영알못이어도 괜찮아<br>정교한 번역</strong>
+              <p class="desc_g el_motion">
+                낯설기만 한 외국어<br>다양한 번역 사례와 언어 데이터가 <br class="mo_linefeed">더욱 정교한 번역을 도와줍니다.
+              </p>
+              <div class="img_character img_character3 el_motion"></div>
+            </div>
+            <div class="intro_cont intro_cont4">
+              <strong class="tit_g el_motion">모바일로<br>빠르고 간편한 결제</strong>
+              <p class="desc_g el_motion">
+                음식은 맛있게, 정산은 카카오톡에서 한 번에!<br>모바일의 안전한 결제를 위해서도 <br class="mo_linefeed">데이터가 일하고 있습니다.
+              </p>
+              <div class="img_character img_character4 el_motion"></div>
+            </div>
+            <div class="intro_cont intro_cont5">
+              <strong class="tit_g el_motion">데이터 분석으로<br>편리한 쇼핑</strong>
+              <p class="desc_g el_motion">
+                깜빡했던 친구의 생일,<br>내 친구의 선물을 알아서 추천해 주는 것도 <br class="mo_linefeed">데이터 기술입니다.
+              </p>
+              <div class="img_character img_character5 el_motion"></div>
+            </div>
+            <div class="intro_cont intro_cont6">
+              <strong class="tit_g el_motion">내가 있는곳이 길이다<br>최적의 길 찾기</strong>
+              <p class="desc_g el_motion">
+                막히는 퇴근길에 최적의 경로를 찾을 수 있는 것은<br>먼저 그 길을 지나간 <br class="mo_linefeed">수많은 운행 데이터 덕분입니다.
+              </p>
+              <div class="img_character img_character6 el_motion"></div>
+            </div>
+            <div class="intro_cont intro_cont7">
+              <strong class="tit_g el_motion">맞춤형 제안으로<br>인기작 추천</strong>
+              <p class="desc_g el_motion">
+                여유로운 저녁시간, 뭔가 보고 싶지만 고르기 귀찮을 때<br>맞춤형 제안으로 <br class="mo_linefeed">내 취향에 딱 맞는 추천작을 볼 수 있습니다.
+              </p>
+              <div class="img_character img_character7 el_motion"></div>
+            </div>
+            <div class="paging_slide">
+              <!-- 페이징 고정일때 paging_fixed / 마지막 intro_cont7 영역에 진입했을때 paging_slide2 클래스 추가해주세요 -->
+              <span class="txt_page on">1</span><!-- 활성화시 on 클래스 추가해주세요 -->
+              <span class="txt_page">2</span>
+              <span class="txt_page">3</span>
+              <span class="txt_page">4</span>
+              <span class="txt_page">5</span>
+              <span class="txt_page">6</span>
+              <span class="txt_page">7</span>
+            </div>
+          </div>
+          <div class="wrap_bnr">
+            <a href="#none" class="link_bnr">
+              <img src="../images/banner.png" height="80" class="img_bnr pc_ver" alt="배너영역">
+              <img src="../images/m640/banner.png" height="60" class="img_bnr mobile_ver" alt="배너영역">
+            </a>
+          </div>
+          <div class="info_main">
+            <strong class="tit_main">카카오는 <br class="mo_linefeed">데이터의 연결과 보호의 균형을 위해<br>언제나 최선을 다 하겠습니다.</strong>
+            <ul class="list_main">
+              <li>
+                <a href="#none" class="link_item">
+                  <strong class="tit_item">프라이버시 철학<span class="ico_privacy ico_arrow"></span></strong>
+                  <p class="desc_item">카카오의 프라이버시 철학을 <br class="pc_linefeed">소개합니다.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#none" class="link_item">
+                  <strong class="tit_item">개인정보 처리절차<span class="ico_privacy ico_arrow"></span></strong>
+                  <p class="desc_item">정보가 수집, 이용, 제공, 파기되는 <br class="pc_linefeed">모든 과정을 알려드립니다.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#none" class="link_item">
+                  <strong class="tit_item">투명성보고서<span class="ico_privacy ico_arrow"></span></strong>
+                  <p class="desc_item">카카오의 투명성보고서를 <br class="pc_linefeed">공개합니다.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#none" class="link_item">
+                  <strong class="tit_item">프라이버시 소식<span class="ico_privacy ico_arrow"></span></strong>
+                  <p class="desc_item">프라이버시 보호 관련 <br class="pc_linefeed">다양한 소식을 전합니다.</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <a href="#" class="link_top"><span class="ico_privacy ico_top">top</span></a>
+        </div>
+        <!-- // mArticle -->
+      </div>
+      <!-- // cMain -->
+    </div>
+    <!-- // kakaoContent -->
+    <hr class="hide">
+    <div id="kakaoFoot" role="contentinfo">
+      <h2 class="screen_out">서비스 이용정보</h2>
+      <small class="info_copyright"><span class="txt_copyright">Copyright </span><a href="#none" target="_blank" class="link_kakao">&copy;
+          Kakao Corp.</a><span class="txt_copyright"> All rights reserved.</span></small>
+      <div class="info_relation">
+        <a href="#none" target="_blank" class="link_cs">고객센터 문의하기<span class="ico_privacy ico_arrow"></span></a>
+        <div class="relation_svc relation_open">
+          <!-- 메뉴활성화시 relation_open 클래스 추가해주세요~ -->
+          <strong class="tit_relation">
+            <a href="#none" class="link_tit">관련사이트<span class="ico_privacy ico_relation">메뉴 펼치기/접기</span></a>
+          </strong>
+          <ul class="list_relation">
+            <li><a href="https://www.kakaocorp.com" target="_blank" class="link_relation">카카오</a></li>
+            <li><a href="https://www.daum.net " target="_blank" class="link_relation">다음 포털 사이트</a></li>
+            <li><a href="http://www.kakao.com/main" target="_blank" class="link_relation">카카오 서비스</a></li>
+            <li><a href="https://accounts.kakao.com" target="_blank" class="link_relation">카카오 계정</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- // kakaoFoot -->
+  </div>
+  <!-- 시안 확인용 임시 스크립트입니다 -->
+  <script type="text/javascript" src="http://s1.daumcdn.net/svc/original/U03/cssjs/jquery/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="http://html.gt.dev.daum.net/privacy-2018/service/_js/ui.js"></script>
+  <!-- //시안 확인용 임시 스크립트입니다 -->
 
-            if(!target[fieldSet[idx]]) {
-                target[fieldSet[idx]] = {}
-            }
+  <script>
+    /**
+     * FLOW
+     * [] nowScene으로 지금 있는 Scene 체크
+     * [] 움직이는지 체크
+     * 
+     */
 
-            assignDeep(target[fieldSet[idx]], field, idx + 1, value)
+
+
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   // $el.addEventListener('click', function (e) {
+    //   //   console.log(e.target);
+    //   // });
+    // });
+
+    var nowScene = 1;
+    var container = document.querySelector('.wrap_slide');
+
+    function setSection() {
+      var $el = container.querySelectorAll('.intro_cont');
+      $el.forEach(function (el, idx) {
+        el.style.height = getWindowHeight()
+        console.log(el[idx], 'getWindowHeight() === ', getWindowHeight());
+      })
+    }
+
+    function moveSection() {
+    }
+
+    function moveSectionUp() {
+
+    }
+
+    function getWindowHeight() {
+      return 'innerHeight' in window ? window.innerHeight : document.documentElement.offsetHeight;
+    }
+
+    function isLowIE() {
+      return window.addEventListener ? false : true
+    }
+
+    function setTagStyle(el, css) {
+      for (var key in css) {
+        if (Object.prototype.hasOwnProperty.call(css, key)) {
+          el.style[key] = css[key]
         }
+      }
+    }
 
-        var office = {};
+    function createElement(tag, css, attrs) {
+      var el = document.createElement(tag)
+      if (attrs) {
+        setAttr(el, attrs)
+      }
+      if (css) {
+        setTagStyle(el, css)
+      }
+      return el
+    }
 
-        assignDeep(office, 'teams.ftdev.dia.name', 0, 'lee');
-
-        console.log(office.teams.ftdev.dia.name); // lee
-
-        /**
-        office object status in json should look like:
-        office {
-            teams: {
-                ftdev: {
-                  dia: {
-                      name: 'hyuna'
-                  }
-                }
-            } 
+    function setAttr(el, attrs) {
+      for (var attr in attrs) {
+        if (Object.prototype.hasOwnProperty.call(attrs, attr)) {
+          el.setAttribute(attr, attrs[attr])
         }
-        **/
-    </script>
+      }
+    }
+
+    setSection()
+  </script>
 </body>
+
 </html>

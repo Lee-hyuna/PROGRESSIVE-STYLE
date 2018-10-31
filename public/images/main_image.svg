@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="67" viewBox="0 0 300 67">
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#62779E" stroke-linejoin="round" stroke-width="9" d="M53.99 14.222l-20.35 19.35 19.857 19.73C48.315 58.665 41.047 62 33 62 17.26 62 4.5 49.24 4.5 33.5S17.26 5 33 5c8.306 0 15.781 3.553 20.99 9.222z"/>
+        <text fill="#62779E" font-family="AppleSDGothicNeo-Heavy, Apple SD Gothic Neo" font-size="46.5" font-weight="600" letter-spacing="-1.14" transform="translate(0 .5)">
+            <tspan x="71.735" y="51">TAX</tspan> <tspan x="160.292" y="51" font-family="AppleSDGothicNeo-Light, Apple SD Gothic Neo" font-weight="300">FRIEN</tspan> <tspan x="271.865" y="51" font-family="AppleSDGothicNeo-Light, Apple SD Gothic Neo" font-weight="300">D</tspan>
+        </text>
+    </g>
+</svg>
